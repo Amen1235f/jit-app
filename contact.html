@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<style>  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-image: url('bg1.png');
+    color: white;
+}
+
+.navbar img {
+    width: 80px;
+    height: 80px;
+    margin-left: 150px;
+}
+
+.list-nav {
+    display: flex;
+    gap: 30px;
+    font-weight: bold;
+    font-size: large;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.l1 {
+    color: #a3c644;
+    font-size: larger;
+}
+
+/* Style for normal state */
+.list-nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+/* Smooth hover effect */
+.list-nav li a:hover {
+    color: #a3c644;
+    text-decoration: underline;
+}
+
+.btnTch {
+    padding: 20px 40px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    margin-right: 150px;
+    cursor: pointer;
+}
+.btnTch:hover{
+    color: black;
+    background-color: #a3c644;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+    border-color: #a3c644;
+}
+
+
+
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px;
+    background-image: url('bg1.png');
+}
+.title1{
+    color: #a3c644;
+    text-align: left;
+    margin-left: 50px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.title2{
+    color: white;
+    font-weight: bolder;
+    margin-left: 50px;
+
+}
+
+.p1{
+    color: white;
+    font-weight: 500;
+    margin-left: 50px;
+}
+.about-text {
+    max-width: 50%;
+    margin-left: 70px;
+}
+
+.about-text h3 {
+    color: #a3c644;
+    
+    text-transform: uppercase;
+}
+
+.about-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.8;
+}
+
+.about-image img {
+    max-width: 50%;
+    height: auto;
+    margin-left: 200px;
+}
+
+
+.info-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 50px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+.detail-box {
+    text-align: center;
+}
+.detail-box .icon-style {
+    font-size: 24px;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+.detail-box .heading {
+    margin: 10px 0 5px 0;
+    color: #333333;
+}
+.detail-box .text {
+    margin: 0;
+    color: #666666;
+}
+.detail-box .hyperlink {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+
+
+
+.wrapper {
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Optional padding for content inside */
+}
+
+.image-container {
+  flex: 1;
+}
+
+.image-container img {
+  width: 50%;
+  height: 500px;
+  margin-left: 250px;
+}
+.form-container {
+  flex: 1;
+  margin-right: 250px;
+  padding: 5px; /* Reduced padding */
+}
+
+h2, h3 {
+  margin: 0;
+  padding-bottom: 8px; /* Slightly reduced padding */
+  font-size: 1.5rem; /* Adjusted font size */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 8px; /* Reduced margin */
+  font-size: 0.9rem; /* Adjusted font size */
+}
+
+input, textarea {
+  margin-top: 4px; /* Reduced margin */
+  padding: 8px; /* Reduced padding */
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Slightly smaller border radius */
+  font-size: 0.9rem; /* Adjusted font size */
+}
+
+button {
+  margin-top: 15px; /* Slightly reduced margin */
+  padding: 8px; /* Reduced padding */
+  background-color: #8bc34a;
+  color: #fff;
+  border: none;
+  border-radius: 4px; /* Slightly smaller border radius */
+  font-size: 0.9rem; /* Adjusted font size */
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7cb342;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .wrapper {
+      flex-direction: column; /* Stack elements vertically */
+  }
+
+  .image-container {
+      display: none; /* Hide the image on smaller screens */
+  }
+
+  .form-container {
+      padding: 10px; /* Add more padding for readability */
+  }
+
+  h2, h3 {
+      font-size: 1.2rem; /* Reduce heading size */
+  }
+
+  input, textarea {
+      font-size: 0.8rem; /* Reduce input size */
+  }
+
+  button {
+      font-size: 0.8rem; /* Reduce button size */
+  }
+}
+
+
+
+
+
+
+
+.footer-section {
+    margin-top: 30px;
+    background-image: url('bg1.png');
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers elements horizontally */
+    align-items: center; /* Centers elements vertically */
+    text-align: center; /* Centers text */
+    padding: 40px 80px;
+    background-color: #111827;
+    color: white;
+    gap: 50px; /* Adds spacing between sections */
+  }
+  
+  .footer-left, .footer-middle, .footer-right {
+    flex: 1;
+    max-width: 300px; /* Limits width for better centering */
+  }
+  
+  .footer-left {
+    text-align: center; /* Ensures left section is centered */
+  }
+  
+  .footer-left img {
+    width: 120px; /* Adjust logo size */
+    margin-bottom: 10px;
+  }
+  
+  .footer-left p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d1d5db;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center; /* Centers icons */
+    gap: 10px;
+    margin-top: 10px;
+    margin-right: 390px;
+    gap: -58px;
+    float: left;
+  
+  }
+  
+  .social-icons a img {
+    width: 20px;
+    height: 20px;
+    margin-left: 0;
+  }
+  
+  .footer-middle {
+    text-align: center; /* Centers links */
+  }
+  
+  .footer-middle ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-middle ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-middle ul li a {
+    text-decoration: none;
+    color: #d1d5db;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-middle ul li a:hover {
+    color: #38bdf8;
+  }
+  
+  .footer-right {
+
+    text-align: left; /* Centers form */
+  }
+  
+  .footer-right input {
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #374151;
+    background: #1f2937;
+    color: white;
+  }
+  
+  .footer-right button {
+    padding: 10px 15px;
+    background-color: #a3e635;
+    border: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .footer-right button:hover {
+    background-color: #84cc16;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #374151;
+    font-size: 13px;
+    color: #9ca3af;
+  }
+  .bt{
+    margin-right: 165px;
+    margin-top: 10px;
+  }
+.img11{
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  text-align:left;
+  margin-right: 25px;
+}
+.contact-section {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+        }
+        .contact-item {
+            text-align: center;
+        }
+        .contact-item i {
+            font-size: 24px;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+        .contact-item h4 {
+            margin: 10px 0 5px 0;
+            color: #333333;
+        }
+        .contact-item p {
+            margin: 0;
+            color: #666666;
+        }
+        .contact-item a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+
+
+        a{
+          text-decoration: none; /* Removes underline */
+          color: inherit;
+          }  
+
+        
+
+</style>
+<body>
+    <div class="navbar" id="navbar">
+       <a href="home.html"><img src="jit.png" alt="J-IT Logo"></a> 
+        <ul class="list-nav">
+            <li class="l1" ><a href="#about-us">About Us</a></li>
+            <li class="l1"><a href="#solutions">Solutions</a></li>
+            <li class="l1"><a href="#company-values">Our Company Values</a></li>
+        </ul>
+        <a href="./contact.html" class="btnTch">Get In Touch</a>
+      </div>
+   
+
+
+    <!-- About Us Section -->
+    <section class="about-section" id="about-us">
+        <div class="about-text">
+            <h3 class="title1">Contact</h3>
+            <h1 class="title2">Always searching for improved solutions.</h1>
+            <p class="p1">
+                Reach out for inquiries, support, or to schedule a consultation. We're here to assist you.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="map.png" alt="Our Team">
+        </div>
+    </section>
+
+        <div class="info-container">
+            <div class="detail-box">
+                <i class="fas fa-map-marker-alt icon-style"></i>
+                <h4 class="heading">Address</h4>
+                <p class="text">Sfax</p>
+            </div>
+            <div class="detail-box">
+                <i class="fas fa-envelope icon-style"></i>
+                <h4 class="heading">Email</h4>
+                <a href="mailto:j-itengineereg.com" class="hyperlink">j-itengineereg.com</a>
+            </div>
+            <div class="detail-box">
+                <i class="fas fa-phone icon-style"></i>
+                <h4 class="heading">Phone</h4>
+                <p class="text">+216 11234512</p>
+            </div>
+            <div class="detail-box">
+                <i class="fas fa-clock icon-style"></i>
+                <h4 class="heading">Opening Hours</h4>
+                <p class="text">Mon-Sat: 9 AM - 06 PM</p>
+                <p class="text">Sun: Day off</p>
+            </div>
+        </div>
+
+
+
+   <!--form-->
+   <div class="wrapper">
+    <div class="image-container">
+        <img src="bsn.png" alt="Person writing at a desk">
+    </div>
+    <div class="form-container">
+        <h2>BUSINESS CONSULTING</h2>
+        <h3>Get in touch</h3>
+        <form id="consult-form">
+          <label for="input-first-name">First Name</label>
+          <input type="text" id="input-first-name" name="first-name" placeholder="First name" required>
+          
+          <label for="input-last-name">Last Name</label>
+          <input type="text" id="input-last-name" name="last-name" placeholder="Last name" required>
+          
+          <label for="input-phone">Your Phone</label>
+          <input type="tel" id="input-phone" name="phone" placeholder="Your phone" required>
+          
+          <label for="input-email">Your Email</label>
+          <input type="email" id="input-email" name="email" placeholder="Your email" required>
+          
+          <label for="input-subject">Subject</label>
+          <input type="text" id="input-subject" name="subject" placeholder="Example Text" required>
+          
+          <label for="input-message">Your Message</label>
+          <textarea id="input-message" name="message" placeholder="Your Message" required></textarea>
+          
+          <button type="submit">Send message</button>
+      </form>
+    </div>
+</div>
+  
+   <!---->
+
+<!--footer-->
+
+<!-- HTML -->
+<footer class="footer-section">
+    <div class="footer-left">
+      <img src="jit.png" alt="J-IT Engineering Logo" class="img11">
+      <img src="tisax.png" alt="TISAX Logo"  class="img11">
+      <p style="text-align:left">Expert guidance tailored to your business needs, driving growth and innovation.</p>
+      <p  style="color: white;float:left;  margin-left: 0;">Subscribe Us</p><br>
+      <div class="social-icons" >
+        <a href="#"><img src="fb.png" alt="Facebook"></a>
+        <a href="#"><img src="inst.png" alt="Instagram"></a>
+        <a href="#"><img src="x.png" alt="Other"></a>
+      </div>
+    </div>
+    <div class="footer-middle">
+      <h3>Useful Links</h3>
+      <ul>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#values">Our Values</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <h3 style="color: white;">Subscribe to Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Your email address">
+        <button type="submit" class="bt">Subscribe</button>
+      </form>
+      <p>Address: Sfax, Tunisie</p>
+      <p>Email: <a href="mailto:Test@jit-engineering.com">Test@jit-engineering.com</a></p>
+      <p>Phone: +216 12345678</p>
+    </div>
+    <div class="footer-bottom">
+      <p  style="color: white;">Developed by Khaled Jalleli</p>
+    </div>
+  </footer>
+  
+  
+<!---->
+  <script>
+
+    document.getElementById("consult-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent default form submission
+  
+      // Collect form data
+      const firstName = document.getElementById("input-first-name").value;
+      const lastName = document.getElementById("input-last-name").value;
+      const phone = document.getElementById("input-phone").value;
+      const email = document.getElementById("input-email").value;
+      const subject = document.getElementById("input-subject").value;
+      const message = document.getElementById("input-message").value;
+  
+      // Create mailto link
+      const mailtoLink = `mailto:Test@jit-engineering.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+          `Name: ${firstName} ${lastName}%0D%0A
+          Phone: ${phone}%0D%0A
+          Email: ${email}%0D%0A
+          Message: ${message}`
+      )}`;
+  
+      // Open email client
+      window.location.href = mailtoLink;
+    });
+  </script>
+
+</body>
+</html>
